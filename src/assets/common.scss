@@ -1,0 +1,37 @@
+@import './variables';
+@import './elastic';
+
+*,
+*::before,
+*::after,
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: calc-between-width(2, 0.05, 375, 10);
+
+  @media screen and (max-width: $mobile-width-only) {
+    font-size: calc-between-width(375, 10, 1024, 27.3);
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: calc-between-width(1025, 6.4, 1600, 10);
+  }
+}
+
+body {
+  background-color: #2d2d2d;
+}
+
+#root {
+  height: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+}
